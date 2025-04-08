@@ -8,7 +8,7 @@ const App: React.FC = () => {
   const { darkMode } = useContext(ThemeContext)!;
   const [articles, setArticles] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
-  const [visibleCount, setVisibleCount] = useState(22);
+  const [visibleCount, setVisibleCount] = useState(24);
 
   useEffect(() => {
     fetch("https://dev.to/api/articles?tag=wecoded")
@@ -98,7 +98,7 @@ const App: React.FC = () => {
               ))}
               {visibleCount < articles.length && (
                 <div className="text-center mt-4">
-                  <button className="btn btn-outline-primary rounded-pill bg-primary px-4 py-2 fw-bold" onClick={showMore}>
+                  <button className="btn border border-primary btn-outline-primary rounded-pill px-4 py-2 fw-bold" onClick={showMore}>
                     Show More
                   </button>
                 </div>
