@@ -23,8 +23,8 @@ const App: React.FC = () => {
       });
   }, []);
 
-  const showMoreArticles = () => {
-    setVisibleCount((prevCount) => prevCount + 3);
+  const showMore = () => {
+    setVisibleCount((prev) => prev + 6);
   };
 
   return (
@@ -44,71 +44,65 @@ const App: React.FC = () => {
         </div>
 
         <div className="container mt-5 rounded-top">
-          <div className="row">
-            {loading ? (
-              <div className="d-flex justify-content-center w-100">
-                <div className="spinner-border text-primary" role="status">
-                  <span className="visually-hidden">Loading...</span>
-                </div>
+          {loading ? (
+            <div className="text-center my-5">
+              <div className="spinner-border text-primary" role="status" style={{ width: "3rem", height: "3rem" }}>
+                <span className="visually-hidden">Loading...</span>
               </div>
-            ) : (
-              <>
-                {articles.slice(0, visibleCount).map((article, index) => (
-                  <div key={index} className="col-md-4 mb-4">
-                    <div className={`card ${darkMode ? "card-dark" : ""}`}>
-                      <div
-                        className="card-img-top rounded-top"
-                        style={{
-                          background: article.cover_image
-                            ? `url(${article.cover_image}) center/cover no-repeat`
-                            : "linear-gradient(135deg, #4531ea, #9d00e5)",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          height: "180px",
-                        }}
-                      >
-                        {!article.cover_image && (
-                          <img
-                            className="logo"
-                            src={wecodedLogo}
-                            alt="Logo"
-                            style={{
-                              maxWidth: "30%",
-                              maxHeight: "30%",
-                              filter: "brightness(2.1)",
-                              margin: "auto",
-                            }}
-                          />
-                        )}
+            </div>
+          ) : (
+            <div className="row">
+              {articles.slice(0, visibleCount).map((article, index) => (
+                <div key={index} className="col-md-4 mb-4">
+                  <div className={`card ${darkMode ? "card-dark" : ""}`}>
+                    <div
+                      className="card-img-top rounded-top"
+                      style={{
+                        background: article.cover_image
+                          ? `url(${article.cover_image}) center/cover no-repeat`
+                          : "linear-gradient(135deg, #4531ea, #9d00e5)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        height: "180px",
+                      }}
+                    >
+                      {!article.cover_image && (
+                        <img
+                          className="logo"
+                          src={wecodedLogo}
+                          alt="Logo"
+                          style={{ maxWidth: "30%", maxHeight: "30%", filter: "brightness(2.1)" }}
+                        />
+                      )}
+                    </div>
+                    <div className="card-body">
+                      <h5 className="card-title">{article.title}</h5>
+                      <p className="card-text">{article.description}</p>
+                      <div className="d-flex align-items-center mb-3">
+                        <img
+                          src={article.user.profile_image}
+                          alt={article.user.name}
+                          className="rounded-circle me-2"
+                          width="30"
+                          height="30"
+                        />
+                        <span className="text-muted small">{article.user.name}</span>
                       </div>
-                      <div className="card-body">
-                        <h5 className="card-title">{article.title}</h5>
-                        <p className="card-text">{article.description}</p>
-                        <p className="text-muted mb-2">
-                          👤 <strong>{article.user?.name}</strong>
-                        </p>
-                        <a
-                          href={article.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="btn btn-primary"
-                        >
-                          Read More
-                        </a>
-                      </div>
+                      <a href={article.url} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                        Read More
+                      </a>
                     </div>
                   </div>
-                ))}
-              </>
-            )}
-          </div>
-
-          {!loading && visibleCount < articles.length && (
-            <div className="text-center mt-4">
-              <button className="btn btn-outline-secondary" onClick={showMoreArticles}>
-                Show More
-              </button>
+                </div>
+              ))}
+              {visibleCount < articles.length && (
+                <div className="text-center mt-4">
+                  <button className="btn btn-outline-primary rounded-pill px-4 py-2 fw-bold" onClick={showMore}>
+                    Show More
+                  </button>
+                </div>
+              )}
             </div>
           )}
         </div>
@@ -120,7 +114,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-
-
-
-
