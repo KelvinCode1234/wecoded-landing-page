@@ -8,7 +8,7 @@ const App: React.FC = () => {
   const { darkMode } = useContext(ThemeContext)!;
   const [articles, setArticles] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
-  const [visibleCount, setVisibleCount] = useState(6);
+  const [visibleCount, setVisibleCount] = useState(22);
 
   useEffect(() => {
     fetch("https://dev.to/api/articles?tag=wecoded")
