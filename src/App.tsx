@@ -87,7 +87,7 @@ const App: React.FC = () => {
                           width="30"
                           height="30"
                         />
-                        <span className="text-primary small ">{article.user.name}</span>
+                        <p>{article.user.name}</p>
                       </div>
                       <a href={article.url} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
                         Read More
