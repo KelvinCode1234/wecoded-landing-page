@@ -87,7 +87,7 @@ const App: React.FC = () => {
                           width="30"
                           height="30"
                         />
-                        <span className="text-muted small">{article.user.name}</span>
+                        <span className="text-primary small ">{article.user.name}</span>
                       </div>
                       <a href={article.url} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
                         Read More
@@ -98,7 +98,7 @@ const App: React.FC = () => {
               ))}
               {visibleCount < articles.length && (
                 <div className="text-center mt-4">
-                  <button className="btn btn-outline-primary rounded-pill px-4 py-2 fw-bold" onClick={showMore}>
+                  <button className="btn btn-outline-primary rounded-pill bg-primary px-4 py-2 fw-bold" onClick={showMore}>
                     Show More
                   </button>
                 </div>
