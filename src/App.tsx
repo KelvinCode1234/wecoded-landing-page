@@ -53,8 +53,8 @@ const App: React.FC = () => {
           ) : (
             <div className="row">
               {articles.slice(0, visibleCount).map((article, index) => (
-                <div key={index} className="col-md-4 mb-4">
-                  <div className={`card ${darkMode ? "card-dark" : ""}`}>
+                <div key={index} className="col-md-4 mb-4 d-flex">
+                  <div className={`card ${darkMode ? "card-dark" : ""} flex-grow-1 d-flex flex-column`} style={{ minHeight: '100%' }}>
                     <div
                       className="card-img-top rounded-top"
                       style={{
@@ -65,6 +65,7 @@ const App: React.FC = () => {
                         alignItems: "center",
                         justifyContent: "center",
                         height: "180px",
+                        flexShrink: 0
                       }}
                     >
                       {!article.cover_image && (
@@ -76,9 +77,9 @@ const App: React.FC = () => {
                         />
                       )}
                     </div>
-                    <div className="card-body">
+                    <div className="card-body d-flex flex-column">
                       <h5 className="card-title">{article.title}</h5>
-                      <p className="card-text">{article.description}</p>
+                      <p className="card-text flex-grow-1">{article.description}</p>
                       <div className="d-flex align-items-center mb-3">
                         <img
                           src={article.user.profile_image}
