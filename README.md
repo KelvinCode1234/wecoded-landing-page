@@ -28,7 +28,7 @@
 ## Demo & Screenshots
 Check out these highlights from the user journey and aesthetic transitions.
 
-*Insert a screenshot here, ideally after selecting from your repo assets*
+![Screenshot 3](src/assets/wecoded.png)
 
 ---
 
