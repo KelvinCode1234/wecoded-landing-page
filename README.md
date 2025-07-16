@@ -1,6 +1,6 @@
 # WeCoded Landing Page 🌐
 
-**Celebrate in Code** — a visually captivating, modern landing page crafted for the **WeCoded 2025 Challenge**, following the “Celebrate in Code” prompt. This project is designed to inspire, engage, and shine a light on diversity in tech. ([github.com](https://github.com/KelvinCode1234/wecoded-landing-page?utm_source=chatgpt.com))
+**Celebrate in Code** — a visually captivating, modern landing page crafted for the **WeCoded 2025 Challenge**, following the “Celebrate in Code” prompt. This project is designed to inspire, engage, and shine a light on diversity in tech.
 
 ## 🚀 Live Demo
 [View the live site](https://wecoded-landing-page.vercel.app)  
