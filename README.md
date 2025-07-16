@@ -18,11 +18,10 @@
 ---
 
 ## Key Features
-- Toggleable **Dark & Light Mode** for user preference 🌙 ☀️ ([dev.to](https://dev.to/kelvincode1234/my-wecoded-landing-page-3g5c?utm_source=chatgpt.com))  
+- Toggleable **Dark & Light Mode** for user preference `🌙 ☀️` 
 - Smooth navigation across sections with responsive design  
 - Professional footer with essential links and a cohesive layout  
-- Clean, performance-first build prioritising accessibility ([dev.to](https://dev.to/vibha_parashar/my-wecoded-landing-page-4cd7?utm_source=chatgpt.com), [dev.to](https://dev.to/kelvincode1234/my-wecoded-landing-page-3g5c?utm_source=chatgpt.com))  
-
+- Clean, performance-first build prioritising accessibility.
 ---
 
 ## Demo & Screenshots
