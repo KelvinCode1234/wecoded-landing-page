@@ -16,8 +16,6 @@ html {
   margin-top: -70px; 
 }
 
-
-
 body {
   background-color: #ffffff;
   color: #333;
@@ -278,11 +276,6 @@ body {
   background: #7d00ff;
 }
 
-
-.btn:hover {
-  transform: scale(0.95);
-}
-
 .header::before {
   content: "";
   position: absolute;
@@ -333,7 +326,6 @@ body {
   li {
     margin: -7px;
   }
-
 
   
 }
