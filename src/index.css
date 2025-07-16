@@ -64,14 +64,6 @@ body {
   text-overflow: ellipsis;
 }
 
-.btn {
-  transition: all 0.3s ease-in-out;
-}
-
-.btn:hover {
-  transform: scale(1.1);
-}
-
 .footer {
   animation: slideUp 1s ease-in-out;
 }
